@@ -76,5 +76,5 @@
     }
   },
   "ports" : {},
-  "image" : "Sabuto/hassio-telegraf"
+  "image" : "sabuto/{arch}-hassio-telegraf"
 }
