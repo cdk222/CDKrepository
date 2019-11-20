@@ -4,7 +4,7 @@
   "slug": "hassio_telegraf",
   "description" : "An addon to add telegraf to hassio",
   "url" : "https://github.com/cdk222/hassio-telegraf",
-  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "arch": ["amd64"],
   "startup": "before",
   "boot": "auto",
   "hassio_api": true,
@@ -38,7 +38,7 @@
     "ipmi_sensor": {
       "enabled" : false,
       "interval" : "30s",
-      "timeout" : "20s",
+      "timeout" : "5s",
       "server_user_id" : "user",
       "server_password" : "password",
       "server_protocol" : "lanplus",
@@ -76,5 +76,5 @@
     }
   },
   "ports" : {},
-  "image" : "sabuto/{arch}-hassio-telegraf"
+  "image" : "cdk222/{arch}-hassio-telegraf"
 }
