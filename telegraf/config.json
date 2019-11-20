@@ -76,5 +76,5 @@
     }
   },
   "ports" : {},
-  "image" : "cdk222/hassio-telegraf"
+  "image" : "Sabuto/hassio-telegraf"
 }
