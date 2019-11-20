@@ -1,0 +1,80 @@
+{
+  "name": "Telegraf",
+  "version": "0.4.2",
+  "slug": "hassio_telegraf",
+  "description" : "An addon to add telegraf to hassio",
+  "url" : "https://github.com/Sabuto/hassio-telegraf",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "before",
+  "boot": "auto",
+  "hassio_api": true,
+  "hassio_role": "default",
+  "auth_api": true,
+  "docker_api": true,
+  "host_network": true,
+  "host_pid": true,
+  "apparmor": false,
+  "full_access" : true,
+  "options": {
+    "influxDB" : "http://a0d7b954-influxdb:8086",
+    "influx_db" : "telegraf",
+    "influx_user" : "telegraf",
+    "influx_pw" : "telegraf",
+    "retention_policy" : "day",
+    "kernel" : {
+      "enabled" : true
+    },
+    "swap" : {
+      "enabled" : true
+    },
+    "docker" : {
+      "enabled" : false,
+      "timeout" : "5s"
+    },
+    "smart_monitor" : {
+      "enabled" : false,
+      "timeout" : "30s"
+    },
+    "ipmi_sensor": {
+      "enabled" : false,
+      "interval" : "30s",
+      "timeout" : "20s",
+      "server_user_id" : "user",
+      "server_password" : "password",
+      "server_protocol" : "lan",
+      "server_ip" : "192.168.1.2"
+    }
+  },
+  "schema": {
+    "influxDB" : "str",
+    "influx_db" : "str",
+    "retention_policy" : "str",
+    "influx_user" : "str",
+    "influx_pw" : "str",
+    "kernel" : {
+      "enabled" : "bool"
+    },
+    "swap" : {
+      "enabled" : "bool"
+    },
+    "docker" : {
+      "enabled" : "bool",
+      "timeout" : "str"
+    },
+    "smart_monitor" : {
+      "enabled" : "bool",
+      "timeout" : "str"
+    },
+    "ipmi_sensor": {
+      "enabled" : "bool",
+      "interval" : "str",
+      "timeout" : "str",
+      "server_user_id" : "str",
+      "server_password" : "str",
+      "server_protocol" : "str",
+      "server_ip" : "str"
+    }
+  },
+  "ports" : {},
+  "image" : "sabuto/{arch}-hassio-telegraf"
+}
