@@ -1,7 +1,7 @@
 {
   "name": "Telegraf",
   "version": "0.4.2",
-  "slug": "telegraf",
+  "slug": "hassio_telegraf",
   "description" : "An addon to add telegraf to hassio",
   "url" : "https://github.com/cdk222/CDKhassio-telegraf",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
