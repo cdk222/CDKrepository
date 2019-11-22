@@ -76,5 +76,5 @@
     }
   },
   "ports" : {},
-  "image" : "cdk222/cdkhassio-telegraf-{arch}"
+  "image" : "cdk222/cdkhassio-telegraf"
 }
